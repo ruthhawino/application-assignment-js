@@ -13,19 +13,34 @@
 let items = ['apples', 'bananas', 'oranges', 'bread', 'milk', 'eggs'];
 let quantities = [100, 200, 250, 200, 150, 100];
 
+
 // function to add new item to inventory
 function addItem(name, quantity) {
   items.push(name);
   quantities.push(quantity);
 }
+console.log(items);
+console.log(quantities);
+
+addItem("potatoe",10);
+console.log(items);
+console.log(quantities);
 
 // function to update stock quantity of an existing item
-function updateQuantity(name, quantity) {
-  let index = items.indexOf(name);
+function updateQuantity(oranges, quantity) {
+  let index = items.indexOf(oranges);
   if (index !== -1) {
     quantities[index] = quantity;
   }
+  
+
+
+  
 }
+updateQuantity("eggs",280);
+ console.log(items);
+console.log(quantities);
+
 
 // function to calculate total number of items in inventory
 function totalQuantity() {
@@ -35,15 +50,22 @@ function totalQuantity() {
   }
   return total;
 }
+console.log(totalQuantity())
 
 // function to find item with lowest stock quantity
 function lowestQuantity() {
   let lowest = quantities[0];
   let lowestIndex = 0;
+  console.log(lowest)
+  console.log(lowestIndex)
   for (let i = 1; i < quantities.length; i++) {
     if (quantities[i] < lowest) {
       lowest = quantities[i];
       lowestIndex = i;
     }
-}}
+}
+return lowestQuantity
+}
+
+console.log(lowestQuantity)
 
